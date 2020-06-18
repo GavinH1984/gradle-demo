@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: gavin-demo
+    profiles:
+        active: dev
+
+server:
+  port: 20021
+
+logging:
+  level:
+    org.apache.zookeeper: ERROR
+    kafka.admin: ERROR
+    org.I0Itec.zkclient: ERROR
+---
+
+
