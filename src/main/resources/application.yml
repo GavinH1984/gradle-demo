@@ -5,7 +5,13 @@ spring:
         active: dev
 
 server:
-  port: 20021
+  port: 8443
+  ssl:
+    key-store: ./4310153_www.gavinhuang.cn.pfx
+    key-alias: tomcat
+    enabled: true
+    key-store-password: EidJ5dC9
+    key-store-type: PKCS12
 
 logging:
   level:

@@ -1,17 +1,19 @@
 package cn.gavinhuang.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TestController {
 
     @PostMapping("/api/hello")
-    @ResponseBody
-    public void hello(@RequestBody JSONObject data){
-        //
+    public String hello(@RequestBody JSONObject data){
+        String name = data.get("name").toString();
+        return "hello" + name;
+    }
+
+    @GetMapping("/api/hello/world")
+    public String helloWorld(){
+        return "hello https!";
     }
 }
